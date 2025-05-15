@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderloud Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="need/logo.jpeg" alt="Логотип">
+            <h1>Wonderloud Games</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link">Main</a></li>
+                <li><a href="#" id="about-link">About us</a></li>
+                <li><a href="#" id="contact-link">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <section class="hero">
+            <div class="video-background">
+                <video autoplay loop muted>
+                    <source src="need/main.mp4" type="video/mp4">
+                    Video.
+                </video>
+            </div>
+            <div class="hero-content">
+                <h2>Welcome to the world of games!</h2>
+                <p>Play, learn and have fun with us!</p>
+            </div>
+        </section>
+        
+        <section class="games">
+            <h2>Our games</h2>
+            <div class="games-grid">
+                <div class="game-card" id="memory-game-card">
+                    <img src="need/image.png" alt="Memory Game">
+                    <div class="game-card-content">
+                        <h3>Memory Game</h3>
+                        <p>Find all the pairs of cards within the allotted time!</p>
+                        <a class="play-btn">Play</a>
+                    </div>
+                </div>
+                
+                <div class="game-card" id="tic-tac-toe-card">
+                    <img src="need/tic.png" alt="Крестики-нолики">
+                    <div class="game-card-content">
+                        <h3>Tic Tac Toe</h3>
+                        <p>Classic game with different difficulty levels.</p>
+                        <a class="play-btn">Play</a>
+                    </div>
+                </div>
+                
+                <div class="game-card" id="maze-card">
+                    <img src="need/lab.png" alt="Лабиринт">
+                    <div class="game-card-content">
+                        <h3>Maze</h3>
+                        <p>Find your way out of the random maze!</p>
+                        <a class="play-btn">Play</a>
+                    </div>
+                </div>
+                
+                <div class="game-card" id="tetris-card">
+                    <img src="need/tetris.png" alt="Тетрис">
+                    <div class="game-card-content">
+                        <h3>Tetris</h3>
+                        <p>Classic Tetris with automatic line deletion.</p>
+                        <a class="play-btn">Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <section class="about-page" id="about-page">
+        <h2>About us</h2>
+        <p>Welcome to "Wonderloud Games" – A Place Where Children Can Have Fun!
+
+            We are a team of 6th-grade students from Happy Choice Programming School: Aylan, Ansar, Dima, and Temirlan. We love programming and creating fun, interactive games for kids.
+            
+            At "Wonderloud Games," our goal is to provide exciting games that help children develop their thinking, creativity, and attention. We believe learning can be fun, and our games are designed to offer both entertainment and educational value.
+            
+            Thank you for visiting, and we hope you enjoy playing and learning with us!</p>
+        <div class="team">
+            <div class="team-member">
+                <img src="need/Ansar.jpeg" alt="Angsar">
+                <h3>Angsar</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="need/Alan.jpeg" alt="Alan">
+                <h3>Alan</h3>
+                <p>Backend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="need/Temirlan.jpeg" alt="Temirlan">
+                <h3>Temirlan</h3>
+                <p>Backend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="need/Dima.jpeg" alt="Dima">
+                <h3>Dmitry</h3>
+                <p>Frontend Developer</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2025 Happy Choice</p>
+    </footer>
+    
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Our contacts</h2>
+            <ul>
+                <li>📧 Email: wondergames@gmail.com</li>
+                <li>📞 Phone: +7 (775) 737-97-92</li>
+                <li>📍 Address: Atyrau, Kazakhstan</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="game-window" id="memory-game-window">
+        <div class="game-container">
+            <span class="close-game">&times;</span>
+            <h2 class="game-title">Memory Game</h2>
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy (60 sec)</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium (40 sec)</button>
+                <button class="difficulty-btn" data-difficulty="hard">Difficult (20 sec)</button>
+            </div>
+            <div class="memory-timer">Time: 60</div>
+            <div class="memory-board" id="memory-board"></div>
+        </div>
+    </div>
+
+    <div class="game-window" id="tic-tac-toe-window">
+        <div class="game-container">
+            <span class="close-game">&times;</span>
+            <h2 class="game-title">Tic Tac Toe</h2>
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-size="3">3x3</button>
+                <button class="difficulty-btn" data-size="4">4x4</button>
+                <button class="difficulty-btn" data-size="5">5x5</button>
+            </div>
+            <div class="tic-tac-toe-status" id="tic-tac-toe-status">Your move (X)</div>
+            <div class="tic-tac-toe-board" id="tic-tac-toe-board"></div>
+        </div>
+    </div>
+
+    <div class="game-window" id="maze-window">
+        <div class="game-container">
+            <span class="close-game">&times;</span>
+            <h2 class="game-title">Maze</h2>
+            <div class="maze-controls">
+                <button id="new-maze-btn">New labyrinth</button>
+            </div>
+            <div id="maze"></div> 
+            <button id="resetButton">Reset game</button>
+        </div>
+    </div>
+
+    <div class="game-window" id="tetris-window">
+        <div class="game-container">
+            <span class="close-game">&times;</span>
+            <h2 class="game-title">Tetris</h2>
+            <div class="tetris-container">
+                <canvas id="tetris-board" width="300" height="600"></canvas>
+                <div class="tetris-info">
+                    <h3>Next figure:</h3>
+                    <canvas id="tetris-next-piece" width="120" height="120"></canvas>
+                    <div class="tetris-score">Points: <span id="tetris-score">0</span></div>
+                    <div class="tetris-controls">
+                        <button id="tetris-left">←</button>
+                        <button id="tetris-rotate">↻</button>
+                        <button id="tetris-right">→</button>
+                        <button id="tetris-down">↓</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="memory.js"></script>
+    <script src="tic.js"></script>
+    <script src="maze.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>
